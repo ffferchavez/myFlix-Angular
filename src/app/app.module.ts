@@ -17,18 +17,35 @@ import { FetchApiDataService } from './fetch-api-data.service';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { GenreDialogComponent } from './genre-dialog/genre-dialog.component';
+import { DirectorDialogComponent } from './director-dialog/director-dialog.component';
+import { MovieDetailDialogComponent } from './movie-detail-dialog/movie-detail-dialog.component';
+import { HeaderComponent } from './header/header.component';
+
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
-  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: 'user-profile', component: UserProfileComponent },
+  { path: 'movie-details/:id', component: MovieDetailsComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
     UserRegistrationFormComponent,
     UserLoginFormComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    WelcomePageComponent,
+    UserProfileComponent,
+    MovieDetailsComponent,
+    GenreDialogComponent,
+    DirectorDialogComponent,
+    MovieDetailDialogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

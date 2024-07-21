@@ -1,5 +1,7 @@
 @use '@angular/material' as mat;
-@import 'styles/variables'; // Import variables
+@import 'styles/variables';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 @include mat.core();
 
@@ -73,6 +75,27 @@ button {
   flex: 1 1 300px;
   max-width: 300px;
 }
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 
 @media (max-width: 768px) {
   .mat-card {

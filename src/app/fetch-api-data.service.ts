@@ -162,4 +162,27 @@ export class FetchApiDataService {
     console.error(errorMessage);
     return throwError('Something went wrong; please try again later.');
   }
+
+  public getUserProfile(): Observable<any> {
+    const userId = this.getCurrentUserId();
+    if (!userId) {
+      return throwError('User ID not found');
+    }
+    return this.getUser(userId);
+  }
+  
+  private getCurrentUserId(): string | null {
+    const user = localStorage.getItem('user');
+    if (!user) {
+      return null;
+    }
+    try {
+      const parsedUser = JSON.parse(user);
+      return parsedUser.id || null;
+    } catch (e) {
+      console.error('Error parsing user from localStorage', e);
+      return null;
+    }
+  }
+
 }

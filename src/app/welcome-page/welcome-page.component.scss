@@ -1,16 +1,39 @@
 .main-page {
-    text-align: center;
-    padding: 20px;
-    background-color: #f5f5f5; // Light grey background
-  
-    h1 {
-      font-size: 36px;
-      color: #333; // Darker color for the main header
-      margin-bottom: 20px;
-    }
-  
-    button {
-      margin: 10px;
+  text-align: center;
+  padding: 20px;
+  background-image: url('/assets/img/marvel-background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white; 
+
+  h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: #b2b2b2;
+    margin-bottom: 10px;
+    padding: 0px 300px 0px 300px;
+  }
+
+  button {
+    margin: 10px;
+    color: #000;
+    background-color: #ffffff;
+    &:hover {
+      color: #fff;
+      background-color: #000000;
     }
   }
-  
+}

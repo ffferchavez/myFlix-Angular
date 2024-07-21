@@ -106,6 +106,5 @@
         }
       }
     }
-  },
-  "defaultProject": "myFlix-Angular-client"
+  }
 }

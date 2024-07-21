@@ -1,15 +1,8 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
+@import 'styles/variables'; // Import variables
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the theme object.
 $myFlix-Angular-client-theme: mat.define-theme((
   color: (
     theme-type: light,
@@ -21,20 +14,83 @@ $myFlix-Angular-client-theme: mat.define-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 :root {
   @include mat.all-component-themes($myFlix-Angular-client-theme);
 }
 
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($myFlix-Angular-client-theme);
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
 
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($myFlix-Angular-client-theme);
-/* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: $font-weight-header;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1 {
+  font-size: $font-size-header;
+}
+
+h2 {
+  font-size: $font-size-subheader;
+}
+
+p {
+  font-size: $font-size-main;
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: $font-size-button;
+  font-weight: $font-weight-button;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: 2px solid $secondary-color;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.mat-card {
+  margin: 10px;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .mat-card {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mat-card {
+    flex: 1 1 100%;
+  }
+
+  .main-page {
+    padding: 10px;
+  }
+
+  button {
+    margin-right: 5px;
+    padding: 8px 16px;
+  }
+}

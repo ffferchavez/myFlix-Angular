@@ -1,0 +1,21 @@
+mat-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+  
+    mat-card-title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

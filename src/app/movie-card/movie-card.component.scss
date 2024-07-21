@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.mat-card {
+  background-color: $background-color;
+  width: 280px;
+  margin: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.mat-card-title {
+  font-size: $font-size-subheader;
+  font-weight: $font-weight-subheader;
+}
+
+.mat-card-subtitle {
+  font-size: $font-size-main;
+  font-weight: $font-weight-main;
+}

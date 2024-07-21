@@ -18,14 +18,16 @@ export class UserLoginFormComponent implements OnInit {
     public snackBar: MatSnackBar
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   loginUser(): void {
     this.fetchApiData.loginUser(this.loginData).subscribe((result) => {
       // Store user data and token in localStorage
-      localStorage.setItem('currentUser', JSON.stringify(result.user));
-      localStorage.setItem('token', result.token);
+      const userData = {
+        Username: result.user.Username,
+        token: result.token
+      };
+      localStorage.setItem('user', JSON.stringify(userData));
 
       this.dialogRef.close(); // Close the dialog on success
       this.snackBar.open('Login successful!', 'OK', {

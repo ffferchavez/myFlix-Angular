@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myFlix-Angular": { // Updated project name
+    "myFlix-Angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myFlix-Angular", // Updated output path
+            "outputPath": "dist/myFlix-Angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -55,7 +55,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/myFlix-Angular/" 
             },
             "development": {
               "buildOptimizer": false,
@@ -110,5 +111,5 @@
       }
     }
   },
-  "defaultProject": "myFlix-Angular" // Updated default project name
+  "defaultProject": "myFlix-Angular"
 }

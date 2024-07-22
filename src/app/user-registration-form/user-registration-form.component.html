@@ -7,51 +7,51 @@
       <mat-form-field>
         <input
           matInput
-          [(ngModel)]="userData.username"
+          [(ngModel)]="userData.Username"
           placeholder="Username"
           type="text"
-          name="username"
+          name="Username"
           required
         >
-      </mat-form-field>
-      <mat-form-field>
+        </mat-form-field>
+        <mat-form-field>
         <input
           matInput
-          [(ngModel)]="userData.password"
-          type="password"
+          [(ngModel)]="userData.Password"
+          type = "password"
           placeholder="Password"
-          name="password"
+          name="Password"
           required
         >
       </mat-form-field>
       <mat-form-field>
         <input
           matInput
-          [(ngModel)]="userData.email"
-          type="email"
+          [(ngModel)]="userData.Email"
+          type = "email"
           placeholder="Email"
-          name="email"
+          name="Email"
           required
         >
       </mat-form-field>
       <mat-form-field>
         <input
           matInput
-          [(ngModel)]="userData.birthday"
-          type="date"
-          placeholder="Birthday"
-          name="birthday"
+          [(ngModel)]="userData.Birthday"
+          type = "date"
+          placeholder="Birthday"  
+          name="Birthday"
         >
       </mat-form-field>
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button
-      mat-raised-button
-      (click)="registerUser()"
-      color="primary"
-    >
-      Sign Up
-    </button>
+      <button
+        mat-raised-button
+        (click)="registerUser()"
+        color="primary"
+      >
+        Sign Up
+      </button>
   </mat-card-actions>
 </mat-card>

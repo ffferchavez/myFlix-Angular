@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class UserLoginFormComponent implements OnInit {
 
-  loginData = { username: '', password: '' };
+  loginData = { Username: '', Password: '' };
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -26,7 +26,7 @@ export class UserLoginFormComponent implements OnInit {
     this.fetchApiData.loginUser(this.loginData).subscribe((result) => {
       // Store user data and token in localStorage
       const userData = {
-        username: result.user.Username,
+        Username: result.user.Username,
         token: result.token
       };
       localStorage.setItem('user', JSON.stringify(userData));

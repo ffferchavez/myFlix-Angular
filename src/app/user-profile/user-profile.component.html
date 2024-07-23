@@ -1,13 +1,21 @@
+<!-- Card displaying the user profile form -->
 <mat-card>
+  <!-- Header of the card with title "User Profile" -->
   <mat-card-header>
     <mat-card-title>User Profile</mat-card-title>
   </mat-card-header>
+  
+  <!-- Content of the card containing the user profile form -->
   <mat-card-content>
     <form>
+      <!-- Form field for username input -->
       <mat-form-field>
         <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" />
       </mat-form-field>
+      
       <!-- Add other profile fields here -->
+
+      <!-- Button to trigger profile update -->
       <button mat-button color="primary" (click)="updateProfile()">Update Profile</button>
     </form>
   </mat-card-content>

@@ -1,0 +1,12 @@
+{
+    "out": "docs",
+    "include": ["src"],
+    "exclude": ["src/**/*.spec.ts"],
+    "excludeExternals": true,
+    "excludeNotExported": false,
+    "mode": "modules",
+    "target": "ES6",
+    "module": "commonjs",
+    "name": "Your Angular App"
+  }
+  

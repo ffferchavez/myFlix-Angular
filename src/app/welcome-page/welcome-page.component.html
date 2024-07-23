@@ -1,25 +1,30 @@
+<!-- Main container for the welcome page content -->
 <div class="main-page">
-    <h1>
-      Welcome to Marvel Flix
-    </h1>
-    <h2>Explore the Marvel Cinematic Universe</h2>
-    <h4>Marvel-Flix is a web application that allows users to browse and view information about movies in the Marvel Cinematic Universe. You can explore a list of Marvel movies with detailed information about each movie, including its title, description, genre, director, and more.
-      The application provides features such as searching for movies by title, viewing detailed information about a specific movie, user authentication and authorization, and the ability for users to mark movies as their favorites and view their favorite movies on their profile page.
-      Get started by exploring our collection of movies and dive into the world of Marvel superheroes and stories.</h4>
-    <button
-      mat-raised-button
-      (click)="openUserRegistrationDialog()"
-      style="margin-right: 10px;"
-      color="primary"
-    >
-      Sign Up
-    </button>
-    <button
-      mat-raised-button
-      color="primary"
-      (click)="openUserLoginDialog()"
-      style="margin-right: 10px;"
-    >
-      Login
-    </button>
-  </div>
+  <!-- Main heading for the page -->
+  <h1>
+    Welcome to Marvel Flix
+  </h1>
+  
+  <!-- Subheading describing the Marvel Cinematic Universe -->
+  <h2>Explore the Marvel Cinematic Universe</h2>
+  
+  <!-- Button to open the user registration dialog -->
+  <button
+    mat-raised-button
+    (click)="openUserRegistrationDialog()"
+    style="margin-right: 10px;"
+    color="primary"
+  >
+    Sign Up
+  </button>
+  
+  <!-- Button to open the user login dialog -->
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openUserLoginDialog()"
+    style="margin-right: 10px;"
+  >
+    Login
+  </button>
+</div>

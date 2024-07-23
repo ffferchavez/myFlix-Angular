@@ -1,12 +1,15 @@
+<!-- Card displaying detailed information about the movie -->
 <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><strong>Director:</strong> {{ movie.Director.Name }}</p>
-      <p><strong>Genre:</strong> {{ movie.Genre.Name }}</p>
-      <p><strong>Synopsis:</strong> {{ movie.Synopsis }}</p>
-      <!-- Add more details here -->
-    </mat-card-content>
-  </mat-card>
+  <!-- Header of the card showing the movie title -->
+  <mat-card-header>
+    <mat-card-title>{{ movie.Title }}</mat-card-title>
+  </mat-card-header>
   
+  <!-- Content of the card showing the director, genre, and synopsis -->
+  <mat-card-content>
+    <p><strong>Director:</strong> {{ movie.Director.Name }}</p>
+    <p><strong>Genre:</strong> {{ movie.Genre.Name }}</p>
+    <p><strong>Synopsis:</strong> {{ movie.Synopsis }}</p>
+    <!-- Add more details here -->
+  </mat-card-content>
+</mat-card>

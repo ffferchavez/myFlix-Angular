@@ -1,5 +1,8 @@
+<!-- Conditional container that includes the header component if `showHeader` is true -->
 <ng-container *ngIf="showHeader">
-    <app-header></app-header>
-  </ng-container>
-  <router-outlet></router-outlet>
-  
+  <!-- Header component that displays the application's header -->
+  <app-header></app-header>
+</ng-container>
+
+<!-- Router outlet that displays the routed component based on the current route -->
+<router-outlet></router-outlet>

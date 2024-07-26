@@ -1,30 +1,22 @@
-<!-- Container for displaying movie cards in a flexible layout -->
-<div style="display: flex;">
-  <!-- Card for each movie in the movies array -->
-  <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
-    <!-- Header of the card showing movie title and director -->
-    <mat-card-header>
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
-      <mat-card-subtitle>Directed by: {{ movie.Director.Name }}</mat-card-subtitle>
-    </mat-card-header>
-    <!-- Image of the movie -->
-    <img src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" style="width: 280px;" />
-    <!-- Actions section with buttons to open dialogs for genre, director, and synopsis -->
-    <mat-card-actions>
-      <!-- Button to open the genre dialog -->
-      <button mat-button color="primary" (click)="openDialog('genre', { genreName: movie.Genre.Name, genreDescription: movie.Genre.Description })">
+<div class="movies-container">
+  <mat-card *ngFor="let movie of movies;" class="movie-card">
+    <img [src]="movie.ImagePath" alt="{{ movie.Title }}" />
+    <div class="card-content">
+    <mat-card-title>{{ movie.Title }}</mat-card-title>
+    <div class="mat-card-actions">
+      <div class="actions-links">
+      <a (click)="openDialog('genre', { genreName: movie.Genre.Name, genreDescription: movie.Genre.Description })">
         Genre
-      </button>
-      <!-- Button to open the director dialog -->
-      <button mat-button color="primary" (click)="openDialog('director', { directorName: movie.Director.Name, directorBiography: movie.Director.Biography })">
+      </a>
+      <a (click)="openDialog('director', { directorName: movie.Director.Name, directorBiography: movie.Director.Bio })">
         Director
-      </button>
-      <!-- Button to open the synopsis dialog -->
-      <button mat-button color="primary" (click)="openDialog('details', { movieTitle: movie.Title, movieDetails: movie.Synopsis })">
-        Synopsis
-      </button>
-      <!-- Icon indicating favorite (could be functional or decorative) -->
+      </a>
+      <a (click)="openDialog('details', { movieTitle: movie.Title, movieDetails: movie.Description })">
+        Description
+      </a>
+    </div>
       <mat-icon>favorite_border</mat-icon>
-    </mat-card-actions>
+    </div>
+  </div>
   </mat-card>
 </div>

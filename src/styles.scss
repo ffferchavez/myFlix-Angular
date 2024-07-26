@@ -5,7 +5,7 @@
 
 @include mat.core();
 
-$myFlix-Angular-client-theme: mat.define-theme((
+$myFlix-Angular-theme: mat.define-theme((
   color: (
     theme-type: light,
     primary: mat.$azure-palette,
@@ -17,7 +17,7 @@ $myFlix-Angular-client-theme: mat.define-theme((
 ));
 
 :root {
-  @include mat.all-component-themes($myFlix-Angular-client-theme);
+  @include mat.all-component-themes($myFlix-Angular-theme);
 }
 
 html, body {
@@ -31,19 +31,6 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: $font-weight-header;
-}
-
-h1 {
-  font-size: $font-size-header;
-}
-
-h2 {
-  font-size: $font-size-subheader;
-}
-
-p {
-  font-size: $font-size-main;
-  margin-bottom: 10px;
 }
 
 button {
@@ -63,17 +50,16 @@ button {
   }
 }
 
+::ng-deep .mat-card-title {
+  padding: 10px;
+  color: red;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
-}
-
-.mat-card {
-  margin: 10px;
-  flex: 1 1 300px;
-  max-width: 300px;
 }
 
 header {

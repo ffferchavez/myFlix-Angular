@@ -1,5 +1,9 @@
 .main-page {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   background-image: url('/assets/img/marvel-background.jpg'); 
   background-size: cover;
@@ -9,31 +13,35 @@
   color: white; 
 
   h1 {
-    font-size: 42px;
+    font-size: 84px;
+    font-weight: 700;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   h2 {
     font-size: 34px;
-    color: #000;
+    color: #960b0b;
     margin-bottom: 20px;
   }
 
   h4 {
     font-size: 16px;
-    color: #a9a9a9;
+    color: #000;
     margin-bottom: 10px;
     padding: 0px 300px 0px 300px;
   }
 
   button {
     margin: 10px;
+    border-radius: 2px;
     color: #000;
     background-color: #ffffff;
+    transition: background-color 0.3s ease;
     &:hover {
       color: #fff;
       background-color: #000000;
+      transition: background-color 0.3s ease;
     }
   }
 }

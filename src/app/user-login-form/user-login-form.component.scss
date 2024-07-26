@@ -6,6 +6,7 @@ mat-card {
     mat-card-title {
       font-size: 24px;
       font-weight: 500;
+      margin-bottom: 20px;
     }
   
     mat-form-field {
@@ -14,8 +15,17 @@ mat-card {
     }
   
     button {
-      width: 100%;
-      margin-top: 20px;
+    margin: 10px;
+    border-radius: 2px;
+    color: #fff;
+    width: 100%;
+    background-color: #960b0b;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: #fff;
+      background-color: #000000;
+      transition: background-color 0.3s ease;
+    }
     }
   }
   

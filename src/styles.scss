@@ -26,6 +26,11 @@ html, body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $background-color;
   color: $text-color;
+  background-image: url('/assets/img/marvel-background.jpg') !important; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
